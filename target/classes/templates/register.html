@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Đăng ký mở thẻ</title>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: head/script}"></th:block>
+
+</head>
+<body>
+<div th:insert="~{fragments/headerWebPortalPartial :: headerwebportal}"></div>
+<div class="c-layout-page">
+    <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+    <div class="c-content-box c-size-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="c-font-uppercase c-font-bold">ĐĂNG KÝ MỞ THẺ</h2>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label class="form-label">Họ tên</label>
+                            <input class="form-control c-square c-theme input-lg" type="text" placeholder="Họ tên"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input class="form-control c-square c-theme input-lg" type="email" placeholder="Email"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Số điện thoại</label>
+                            <input class="form-control c-square c-theme input-lg" type="text" placeholder="Số điện thoại"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ngày sinh</label>
+                            <div class="input-medium">
+                                <div class="input-group date">
+                                    <input class="form-control c-square c-theme input-lg" id="birdthday" name="BIRDTH" placeholder="dd-mm-yyyy"
+                                           type="text" value="">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Giới tính</label>
+                            <div class="radio-list">
+                                <label class="radio-inline">
+                                    <input checked="checked" id="Nam" name="SEX" type="radio" value="M">Nam
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="Nu" name="SEX" type="radio" value="F">Nữ
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mật khẩu</label>
+                            <input class="form-control c-square c-theme input-lg" type="password" placeholder="Mật khẩu"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nhập lại mật khẩu</label>
+                            <input class="form-control c-square c-theme input-lg" type="password" placeholder="Nhập lại mật khẩu"/>
+                        </div>
+                        <button type="submit" class="btn c-theme-btn c-btn-uppercase btn-lg c-btn-bold c-btn-square">
+                            Đăn ký
+                        </button>
+
+                    </form>
+                </div>
+                <div class="col-md-4 col-right-menu">
+                    <div th:insert="~{fragments/rightMenuBooksPartial :: rightMenuBooksPartial}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="~{fragments/footerWebPortalPartial :: footerwebportal}"></div>
+<div th:insert="~{fragments/backToTopWebPortal :: backToTopWebPortal}"></div>
+</body>
+</html>

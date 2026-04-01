@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="renewPatron">
+    <div class="content">
+        <form th:action="@{/patron/renew}" modelAttribute="patron" method="post">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Gia hạn bạn đọc</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group form-md-line-input">
+                    <div class="input-group2">
+                        <div class="input-group-control ">
+                            <div class="input-group date date-picker" data-date-format="dd/mm/yyyy">
+                                <label>Ngày gia hạn</label>
+                                <input style="width:559px" type="date" id="popupExpirationDate"
+                                       class="form-control"
+                                       name="datepicker" value="">
+                                <span class="input-group-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-scroll">
+                        <div class="table-scrollable">
+                            <table class="table table-bordered main-table" style="width: 1600px">
+                                <thead class="flip-content1">
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Mã bạn đọc</th>
+                                    <th>Tên bạn đọc</th>
+                                    <th>Ngày hết hạn</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td th:text="${patron.getCode()}"></td>
+                                    <td th:text="${patron.getUserId().getFullName()}"></td>
+                                    <td th:text="${patron.getExpirationDate()}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group text-center">
+                        <div class="errMsg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Đồng ý</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            </div>
+        </form>
+    </div>
+</div>

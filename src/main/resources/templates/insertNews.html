@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"></div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar navbar-collapse collapse ">
+                <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true"
+                    data-slide-speed="200">
+                    <li class="sidebar-toggler-wrapper hide">
+                        <div class="sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-item" id="nav-none">
+                        <a href="/admin" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="uppercase title">Trang chủ</span>
+                            <span class="selected"></span></a>
+                    </li>
+                    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-user"></i>
+                            <span class="uppercase title">Quản lý bạn đọc</span>
+                            <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-patronmanagement-insert">
+                                <a href="/admin/patronmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-list">
+                                <a href="/admin/patronmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-blockedtracking-list">
+                                <a href="/admin/blockedtracking/list" class="nav-link">
+                                    <span class="title">Nhật ký khóa thẻ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-renewcardlog-list">
+                                <a href="/admin/renewcardlog/list" class="nav-link">
+                                    <span class="title">Nhật ký gia hạn thẻ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-patronmanagement-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item"
+                                        id="nav-patronmanagement-patronmanagement-patrontypemanagement">
+                                        <a href="/admin/patrontypemanagement/list" class="nav-link ">
+                                            <span class="title">Loại bạn đọc</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-notebook"></i>
+                            <span class="uppercase title">Quản lý sách giấy</span>
+                            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-bibliographic-update">
+                                <a href="/admin/booksmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-list">
+                                <a href="/admin/booksmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
+                                        <a href="/admin/materialmanagement/list" class="nav-link ">
+                                            <span class="title">Loại tài liệu</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
+                                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
+                                            <span class="title">Thể loại lưu trữ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-calculator"></i>
+                            <span class="uppercase title">Quản lý mượn trả</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-checkout-index">
+                                <a href="/admin/checkout/index" class="nav-link">
+                                    <span class="title">Mượn trả</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-circulation-history">
+                                <a href="/admin/circulation/history" class="nav-link">
+                                    <span class="title">Nhật ký lưu thông</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active open" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="uppercase title">Quản lý cổng thông tin</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-sitemanagement-list">
+                                <a href="/admin/sitemanagement/list" class="nav-link">
+                                    <span class="title">Quản lý site</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active open" id="nav-newsmanagement-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Quản lý tin tức</span>
+                                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
+                                        <a href="/admin/newsmanagement/list" class="nav-link ">
+                                            <span class="title">Tin tức</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
+                                        <a href="/admin/categorymanagement/list" class="nav-link ">
+                                            <span class="title">Chuyên mục</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
+                                        <a href="/admin/authormanagement/list" class="nav-link ">
+                                            <span class="title">Tác giả</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-filesmanagement-list">
+                                <a href="/admin/filesmanagement/list" class="nav-link">
+                                    <span class="title">Quản lý tập tin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-users"></i>
+                            <span class="uppercase title">Quản lý người dùng</span>
+                            <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-usermanagement-list">
+                                <a href="/admin/usermanagement/list" class="nav-link">
+                                    <span class="title">Người dùng</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-rolemanagement-list">
+                                <a href="/admin/rolemanagement/list" class="nav-link">
+                                    <span class="title">Phân quyền</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- END SIDEBAR MENU -->
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content lv-pageContent">
+                <!-- BEGIN PAGE BAR -->
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a href="/admin">Trang chủ</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="">Cổng thông tin</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="">Quản lý tin tức</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="/admin/newsmanagement/list">Tin tức</a>
+                            <i class="fa fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <span>Thêm mới</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END PAGE BAR -->
+                <div class="content-main">
+                    <div class="portlet-body">
+                        <div class="tabbable-custom">
+                            <div class="row">
+                                <div class="col-md-3 xs-mt-12">
+                                    <div class="portlet light portlet-fit portlet-form">
+                                        <div class="portlet-body">
+                                            <div class="form-body">
+                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                    <div class="fileinput-new thumbnail"
+                                                         style="width: 180px; height: 250px;">
+                                                        <img id="img-info-newsmanagement" src="/images/noimage.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                <span class="btn default btn-file">
+                                                    <input type="file" id="file-info-newsmanagement"
+                                                           onchange="core_add.onChangeImage(this)">
+                                                    <span class="fileinput-new">Chọn hình</span>
+                                                </span>
+                                                        <a onclick="core_add.onDefaultImage()"
+                                                           class="btn default fileinput-exists"> Hủy bỏ </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 xs-mt-12">
+                                    <div class="portlet light portlet-fit portlet-form">
+                                        <form action="" method="post">
+                                            <div class="portlet-body">
+                                                <div class="form-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group form-md-line-input">
+                                                                <div class="input-group2">
+                                                                    <div class="input-group-control">
+                                                                        <span class="field-validation-valid"
+                                                                              data-valmsg-for="Title"
+                                                                              data-valmsg-replace="true"
+                                                                              style="color: #e7505a"></span>
+                                                                        <input class="form-control" data-val="true"
+                                                                               data-val-required="Tiêu đề không được bỏ trống"
+                                                                               id="Title" name="Title" type="text"
+                                                                               value="">
+                                                                        <label>Tiêu đề</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group form-md-line-input">
+                                                                <div class="input-group2">
+                                                                    <div class="input-group-control">
+                                                                        <span class="field-validation-valid"
+                                                                              data-valmsg-for="Summary"
+                                                                              data-valmsg-replace="true"
+                                                                              style="color: #e7505a"></span>
+                                                                        <textarea class="form-control" cols="20"
+                                                                                  id="Summary" name="Summary"
+                                                                                  rows="4"></textarea>
+                                                                        <label>Tóm tắt</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group form-md-line-input">
+                                                                <div class="input-group2">
+                                                                    <div class="input-group-control">
+                                                                        <span class="field-validation-valid"
+                                                                              data-valmsg-for="Body"
+                                                                              data-valmsg-replace="true"
+                                                                              style="color: #e7505a"></span>
+                                                                        <textarea class="form-control" cols="20"
+                                                                                  data-val="true"
+                                                                                  data-val-required="Nội dung không được bỏ trống"
+                                                                                  id="Body" name="Body"
+                                                                                  rows="10"></textarea>
+                                                                        <label>Nội dung</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group form-md-line-input">
+                                                                <div class="input-group2">
+                                                                    <div class="input-group-control">
+                                                                        <span class="field-validation-valid"
+                                                                              data-valmsg-for="CategoryId"
+                                                                              data-valmsg-replace="true"
+                                                                              style="color: #e7505a"></span>
+                                                                        <select class="form-control " data-val="true"
+                                                                                data-val-required="Chuyên mục không được bỏ trống"
+                                                                                id="CategoryId" name="CategoryId">
+                                                                            <option value="042d0bd4-5bc3-4ab7-81a5-405d7409611e">
+                                                                                Tin nhanh
+                                                                            </option>
+                                                                            <option value="f091cb75-1c31-40f6-8986-9a4667a7ff7b">
+                                                                                Vui vẻ
+                                                                            </option>
+                                                                            <option value="b35fa3f4-4b89-4e9c-9693-5ab7fba3e8a2">
+                                                                                Tin hoạt động
+                                                                            </option>
+                                                                        </select>
+                                                                        <label>Chuyên mục</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group form-md-line-input">
+                                                                <div class="input-group2">
+                                                                    <div class="input-group-control">
+                                                                        <span class="field-validation-valid"
+                                                                              data-valmsg-for="AuthorId"
+                                                                              data-valmsg-replace="true"
+                                                                              style="color: #e7505a"></span>
+                                                                        <select class="form-control " data-val="true"
+                                                                                data-val-required="Tác giả không được bỏ trống"
+                                                                                id="AuthorId" name="AuthorId">
+                                                                            <option value="b35fa3f4-4b89-4e9c-9693-5ab7fba3e8a8">
+                                                                                Trần Bảo Ngọc
+                                                                            </option>
+                                                                            <option value="b35fa3f4-4b89-4e9c-9693-5ab7fba4e8e4">
+                                                                                Hồ Ngọc Nam
+                                                                            </option>
+                                                                            <option value="b35fa3f4-4b89-4e9c-9693-5ab7fba4e8e5">
+                                                                                Vương Nhất Bác
+                                                                            </option>
+                                                                            <option value="b35fa3f4-4b89-4e9c-9693-5ab7fba4e8e6">
+                                                                                Lý Phong Nhã
+                                                                            </option>
+                                                                            <option value="4045ac8f-9223-47e6-b725-c8353d92fb21">
+                                                                                Hồ Bá Nhật
+                                                                            </option>
+                                                                        </select>
+                                                                        <label>Tác giả</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="portlet-footer pull-right xs-mb-10">
+                                                    <button type="submit" class="btn btn-circle btn-mini btn-info">
+                                                        <i class="fa fa-save mr5"></i>
+                                                        Lưu
+                                                    </button>
+                                                    <button onclick="core_add.onClose()" type="button"
+                                                            class="btn btn-circle default" data-dismiss="modal"
+                                                            aria-hidden="true">
+                                                        <i class="fa fa-close mr5"></i>
+                                                        Trở lại
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+            <!-- BEGIN MODAL -->
+            <!-- END MODAL -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var core_add = {
+
+        onClose: function () {
+            window.location.href = "/admin/newsmanagement/list";
+        },
+
+    }
+
+</script>

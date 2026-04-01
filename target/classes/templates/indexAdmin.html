@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:replace="~{fragments/layoutAdmin :: title}">Title</title>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutAdmin :: head/script}"></th:block>
+
+
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div th:insert="~{fragments/headerAdminPartial :: headerAdminPartial}"></div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN PROGRESSBAR -->
+        <div th:insert="~{fragments/progressBarPartial :: progressBarPartial}"></div>
+        <!-- END PROGRESSBAR -->
+        <!-- BEGIN NOTIFICATION -->
+        <div th:insert="~{fragments/notificationPartial :: notificationPartial}"></div>
+        <!-- END NOTIFICATION -->
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar navbar-collapse collapse ">
+                <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
+<!--                    <div th:insert="~{fragments/leftSidebarAdminPartial :: leftSidebarPartial}"></div>-->
+
+                    <li class="sidebar-toggler-wrapper hide">
+                        <div class="sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="nav-item active open" id="nav-none">
+                        <a href="/admin" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="uppercase title">Trang chủ</span>
+                            <span class="selected"></span></a>
+                    </li>
+                    <li class="nav-item" id="nav-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-user"></i>
+                            <span class="uppercase title">Quản lý bạn đọc</span>
+                            <span class="arrow" id="nav-span-b35fa3f4-4b89-4e9c-9693-5ab7fba3e8ef"></span>
+                        </a>
+                        <ul class="sub-menu" style="display: none;">
+                            <li class="nav-item" id="nav-patronmanagement-insert">
+                                <a href="/admin/patronmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-list">
+                                <a href="/admin/patronmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-blockedtracking-list">
+                                <a href="/admin/blockedtracking/list" class="nav-link">
+                                    <span class="title">Nhật ký khóa thẻ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-renewcardlog-list">
+                                <a href="/admin/renewcardlog/list" class="nav-link">
+                                    <span class="title">Nhật ký gia hạn thẻ</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-patronmanagement-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-patronmanagement-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-patronmanagement-patronmanagement-patrontypemanagement">
+                                        <a href="/admin/patrontypemanagement/list" class="nav-link ">
+                                            <span class="title">Loại bạn đọc</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0765c183-3c39-4a56-af3c-1fa4119698ca">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-notebook"></i>
+                            <span class="uppercase title">Quản lý sách giấy</span>
+                            <span class="arrow" id="nav-span-0765c183-3c39-4a56-af3c-1fa4119698ca"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-bibliographic-update">
+                                <a href="/admin/booksmanagement/insert" class="nav-link">
+                                    <span class="title">Thêm mới</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-list">
+                                <a href="/admin/booksmanagement/list" class="nav-link">
+                                    <span class="title">Danh sách</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-bibliographic-tools">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Công cụ</span>
+                                    <span class="arrow" id="nav-span-bibliographic-tools"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-materialmanagement">
+                                        <a href="/admin/materialmanagement/list" class="nav-link ">
+                                            <span class="title">Loại tài liệu</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-cataloging-bibliographic-mediatypemanagement">
+                                        <a href="/admin/mediatypemanagement/list" class="nav-link ">
+                                            <span class="title">Thể loại lưu trữ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfc">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-calculator"></i>
+                            <span class="uppercase title">Quản lý mượn trả</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfc"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-checkout-index">
+                                <a href="/admin/checkout/index" class="nav-link">
+                                    <span class="title">Mượn trả</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-circulation-history">
+                                <a href="/admin/circulation/history" class="nav-link">
+                                    <span class="title">Nhật ký lưu thông</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-0e19b78e-9757-4394-837d-d3d9ebc33dfd">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="uppercase title">Quản lý cổng thông tin</span>
+                            <span class="arrow" id="nav-span-0e19b78e-9757-4394-837d-d3d9ebc33dfd"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-sitemanagement-list">
+                                <a href="/admin/sitemanagement/list" class="nav-link">
+                                    <span class="title">Quản lý site</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-newsmanagement-list">
+                                <a class="nav-link nav-toggle">
+                                    <span class="title">Quản lý tin tức</span>
+                                    <span class="arrow" id="nav-span-newsmanagement-list"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-newsmanagement">
+                                        <a href="/admin/newsmanagement/list" class="nav-link ">
+                                            <span class="title">Tin tức</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-categorymanagement">
+                                        <a href="/admin/categorymanagement/list" class="nav-link ">
+                                            <span class="title">Chuyên mục</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="nav-portaladmin-newsmanagement-authormanagement">
+                                        <a href="/admin/authormanagement/list" class="nav-link ">
+                                            <span class="title">Tác giả</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" id="nav-filesmanagement-list">
+                                <a href="/admin/filesmanagement/list" class="nav-link">
+                                    <span class="title">Quản lý tập tin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="nav-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef">
+                        <a class="nav-link nav-toggle">
+                            <i class="icon-users"></i>
+                            <span class="uppercase title">Quản lý người dùng</span>
+                            <span class="arrow" id="nav-span-226a6b8c-2fe3-4ef4-9405-c4cb5d728cef"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item" id="nav-usermanagement-list">
+                                <a href="/admin/usermanagement/list" class="nav-link">
+                                    <span class="title">Người dùng</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="nav-rolemanagement-list">
+                                <a href="/admin/rolemanagement/list" class="nav-link">
+                                    <span class="title">Phân quyền</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- END SIDEBAR MENU -->
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="modal fade"
+             id="stackPopupIndex"
+             tabindex="-1"
+             role="dialog"
+             data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content"
+                     id="popupPageDetailIndex">
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content dashboard" style="background: #eef1f5">
+                <div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a href="/admin">Trang chủ</a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span>Tổng quan</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END PAGE BAR -->
+                <!-- BEGIN PAGE TITLE-->
+                <h1 class="page-title">
+                </h1>
+                <!-- END PAGE TITLE-->
+                <!-- END PAGE HEADER-->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-red-haze">
+                                        <span data-counter="counterup" data-value="100"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ GIAO DỊCH</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-shopping-cart"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success red-haze">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-blue-sharp">
+                                        <span data-counter="counterup" data-value="500"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ SÁCH</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-book-open"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success blue-sharp">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-purple-soft">
+                                        <span data-counter="counterup" data-value="1000"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ BẠN ĐỌC</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="icon-user"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success green-dark">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="dashboard-stat2 ">
+                            <div class="display">
+                                <div class="number">
+                                    <h3 class="font-purple-soft">
+                                        <span data-counter="counterup" data-value="100"></span>
+                                    </h3>
+                                    <small>TỔNG SỐ NGƯỜI DÙNG</small>
+                                </div>
+                                <div class="icon">
+                                    <i class="ui-icon-person"></i>
+                                </div>
+                            </div>
+                            <div class="progress-info">
+                                <div class="progress">
+                            <span style="width: 100%;" class="progress-bar progress-bar-success purple-soft">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo tình trạng bạn đọc</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo loại bạn đọc</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv2">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-12 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê giao dịch mượn trả sách</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv4">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo loại sách</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv5">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12 col-sm-12">
+                        <div class="portlet light" style="padding: 12px 20px 15px">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-cursor font-dark hide"></i>
+                                    <span class="caption-subject font-dark bold uppercase">Thống kê theo tình trạng sách</span>
+                                </div>
+                                <div class="actions mr15">
+                                    <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="chartdiv6">
+                                        </div>
+                                    </div>
+                                    <div class="margin-bottom-10 visible-sm"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+</div>
+</body>
+<script type="text/javascript">
+    am4core.ready(function () {
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        am4core.color("#fff");
+
+        // Create chart instance
+        var pieChart = am4core.create("chartdiv", am4charts.PieChart);
+        // pieChart.data = @Html.Raw(Json.Encode(Model.PatronStatusStatistics));
+
+        // Add and configure Series
+        var pieSeries = pieChart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "Total";
+        pieSeries.dataFields.category = "PatronStatusName";
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeWidth = 2;
+        pieSeries.slices.template.strokeOpacity = 1;
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+        pieSeries.ticks.template.disabled = true;
+        pieSeries.labels.template.disabled = true;
+        // Disable sliding out of slices
+        pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+        pieSeries.slices.template.states.getKey("hover").properties.scale = 1.1;
+
+        var chart2 = am4core.create("chartdiv2", am4charts.PieChart);
+        // chart2.data = @Html.Raw(Json.Encode(Model.PatronStatistics));
+        var pieSeries2 = chart2.series.push(new am4charts.PieSeries3D());
+        pieSeries2.dataFields.value = "Total";
+        pieSeries2.dataFields.category = "PatronType";
+        pieSeries2.slices.template.stroke = am4core.color("#fff");
+        pieSeries2.slices.template.strokeWidth = 2;
+        pieSeries2.slices.template.strokeOpacity = 1;
+
+        // This creates initial animation
+        pieSeries2.hiddenState.properties.opacity = 1;
+        pieSeries2.hiddenState.properties.endAngle = -90;
+        pieSeries2.hiddenState.properties.startAngle = -90;
+        pieSeries2.ticks.template.disabled = true;
+        pieSeries2.labels.template.disabled = true;
+        // Disable sliding out of slices
+        pieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+        pieSeries2.slices.template.states.getKey("hover").properties.scale = 1.1;
+
+        if ('@(Model.CurrentSchoolId == Guid.Empty)' === 'True')
+        {
+            var chart3 = am4core.create("chartdiv3", am4charts.PieChart);
+            // chart3.data = @Html.Raw(Json.Encode(Model.PatronSchoolStatistics));
+            var pieSeries3 = chart3.series.push(new am4charts.PieSeries3D());
+            pieSeries3.dataFields.value = "TotalPatrons";
+            pieSeries3.dataFields.category = "SchoolName";
+            pieSeries3.slices.template.stroke = am4core.color("#fff");
+            pieSeries3.slices.template.strokeWidth = 2;
+            pieSeries3.slices.template.strokeOpacity = 1;
+
+            // This creates initial animation
+            pieSeries3.hiddenState.properties.opacity = 1;
+            pieSeries3.hiddenState.properties.endAngle = -90;
+            pieSeries3.hiddenState.properties.startAngle = -90;
+            pieSeries3.ticks.template.disabled = true;
+            //pieSeries3.labels.template.disabled = true;
+            // Disable sliding out of slices
+            pieSeries3.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+            pieSeries3.slices.template.states.getKey("hover").properties.scale = 1.1;
+        }
+
+        var chart = am4core.create('chartdiv4', am4charts.XYChart);
+        // chart.data = @Html.Raw(Json.Encode(Model.CirculationTypeStatistics));
+
+        chart.colors.step = 2;
+
+        chart.legend = new am4charts.Legend()
+        chart.legend.position = 'top'
+        chart.legend.paddingBottom = 20
+        chart.legend.labels.template.maxWidth = 95
+
+        var xAxis = chart.xAxes.push(new am4charts.CategoryAxis())
+        xAxis.dataFields.category = 'Month'
+        xAxis.renderer.cellStartLocation = 0.1
+        xAxis.renderer.cellEndLocation = 0.9
+        xAxis.renderer.grid.template.location = 0;
+
+        var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        yAxis.min = 0;
+
+        function createSeries(value, name) {
+            var series = chart.series.push(new am4charts.ColumnSeries())
+            series.dataFields.valueY = value
+            series.dataFields.categoryX = 'Month'
+            series.name = name
+
+            series.events.on("hidden", arrangeColumns);
+            series.events.on("shown", arrangeColumns);
+
+            var bullet = series.bullets.push(new am4charts.LabelBullet())
+            bullet.interactionsEnabled = false
+            bullet.dy = 30;
+            bullet.label.text = '{valueY}'
+            bullet.label.fill = am4core.color('#ffffff')
+
+            return series;
+        }
+
+
+        function arrangeColumns() {
+
+            var series = chart.series.getIndex(0);
+
+            var w = 1 - xAxis.renderer.cellStartLocation - (1 - xAxis.renderer.cellEndLocation);
+            if (series.dataItems.length > 1) {
+                var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+                var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+                var delta = ((x1 - x0) / chart.series.length) * w;
+                if (am4core.isNumber(delta)) {
+                    var middle = chart.series.length / 2;
+
+                    var newIndex = 0;
+                    chart.series.each(function (series) {
+                        if (!series.isHidden && !series.isHiding) {
+                            series.dummyData = newIndex;
+                            newIndex++;
+                        }
+                        else {
+                            series.dummyData = chart.series.indexOf(series);
+                        }
+                    })
+                    var visibleCount = newIndex;
+                    var newMiddle = visibleCount / 2;
+
+                    chart.series.each(function (series) {
+                        var trueIndex = chart.series.indexOf(series);
+                        var newIndex = series.dummyData;
+
+                        var dx = (newIndex - trueIndex + middle - newMiddle) * delta
+
+                        series.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                        series.bulletsContainer.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                    })
+                }
+            }
+        }
+
+        //chart 5
+        var chartMaterial = am4core.create("chartdiv5", am4charts.PieChart);
+        chartMaterial.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        // chartMaterial.data = @Html.Raw(Json.Encode(Model.MaterialTypeStatistics));
+        chartMaterial.radius = am4core.percent(70);
+        chartMaterial.innerRadius = am4core.percent(40);
+        chartMaterial.startAngle = 180;
+        chartMaterial.endAngle = 360;
+
+        var seriesMaterial = chartMaterial.series.push(new am4charts.PieSeries());
+        seriesMaterial.dataFields.value = "TotalBibs";
+        seriesMaterial.dataFields.category = "MaterialType";
+
+        seriesMaterial.slices.template.cornerRadius = 10;
+        seriesMaterial.slices.template.innerCornerRadius = 7;
+        seriesMaterial.slices.template.draggable = true;
+        seriesMaterial.slices.template.inert = true;
+        seriesMaterial.alignLabels = false;
+
+        seriesMaterial.hiddenState.properties.startAngle = 90;
+        seriesMaterial.hiddenState.properties.endAngle = 90;
+
+        //seriesMaterial.ticks.template.disabled = true;
+        seriesMaterial.labels.template.disabled = true;
+
+        chartMaterial.legend = new am4charts.Legend();
+
+        //chart 6
+        var chartRecordType = am4core.create("chartdiv6", am4charts.PieChart);
+        chartRecordType.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        // chartRecordType.data = @Html.Raw(Json.Encode(Model.BibliographicRecordStatusStatistics));
+        chartRecordType.radius = am4core.percent(70);
+        chartRecordType.innerRadius = am4core.percent(40);
+        chartRecordType.startAngle = 180;
+        chartRecordType.endAngle = 360;
+
+        var seriesRecordType = chartRecordType.series.push(new am4charts.PieSeries());
+        seriesRecordType.dataFields.value = "TotalBibs";
+        seriesRecordType.dataFields.category = "RecordStatusName";
+
+        seriesRecordType.slices.template.cornerRadius = 10;
+        seriesRecordType.slices.template.innerCornerRadius = 7;
+        seriesRecordType.slices.template.draggable = true;
+        seriesRecordType.slices.template.inert = true;
+        seriesRecordType.alignLabels = false;
+
+        seriesRecordType.hiddenState.properties.startAngle = 90;
+        seriesRecordType.hiddenState.properties.endAngle = 90;
+
+        chartRecordType.legend = new am4charts.Legend();
+    }); // end am4core.ready()
+</script>
+<style>
+    #chartdiv, #chartdiv2, #chartdiv3 {
+        width: 100%;
+        height: 300px;
+    }
+
+    #chartdiv4, #chartdiv5, #chartdiv6 {
+        width: 100%;
+        height: 500px;
+    }
+</style>
+</html>

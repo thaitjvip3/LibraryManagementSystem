@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tin tức</title>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: meta}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: link}"></th:block>
+
+    <th:block th:insert="~{fragments/layoutWebPortal :: head/script}"></th:block>
+
+</head>
+<body>
+<div th:insert="~{fragments/headerWebPortalPartial :: headerwebportal}"></div>
+<div class="c-layout-page">
+    <div th:insert="~{fragments/loadingPartial :: loadingPartial}"></div>
+    <!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-3 -->
+    <div class="c-layout-breadcrumbs-1 c-bgimage-tintuc">
+        <div class="container">
+            <div class="c-page-title c-pull-left">
+                <h2 class="c-font-uppercase c-font-bold c-font-white c-font-20 c-font-slim">TIN TỨC & SỰ KIỆN</h2>
+            </div>
+        </div>
+    </div>
+    <!-- END: LAYOUT/BREADCRUMBS/BREADCRUMBS-3 -->
+    <!-- BEGIN: PAGE CONTENT -->
+    <!-- BEGIN: BLOG LISTING -->
+    <div class="c-content-box c-size-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="c-content-new">
+                        <div class="c-content-item row">
+                            <div class="col-md-4">
+                                <img class="c-overlay-object img-responsive" src="/webportal/img/news1.jpg" alt="Title">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="c-title c-font-bold c-font-18">
+                                    <a href="">Title</a>
+                                </div>
+                                <div class="c-date">Ngày ban hành</div>
+                                <p>
+                                    Tóm tăt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-content-new">
+                        <div class="c-content-item row">
+                            <div class="col-md-4">
+                                <img class="c-overlay-object img-responsive" src="/webportal/img/news2.jpg" alt="Title">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="c-title c-font-bold c-font-18">
+                                    <a href="">Title</a>
+                                </div>
+                                <div class="c-date">Ngày ban hành</div>
+                                <p>
+                                    Tóm tăt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-content-new">
+                        <div class="c-content-item row">
+                            <div class="col-md-4">
+                                <img class="c-overlay-object img-responsive" src="/webportal/img/news3.jpg" alt="Title">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="c-title c-font-bold c-font-18">
+                                    <a href="">Title</a>
+                                </div>
+                                <div class="c-date">Ngày ban hành</div>
+                                <p>
+                                    Tóm tăt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-content-new">
+                        <div class="c-content-item row">
+                            <div class="col-md-4">
+                                <img class="c-overlay-object img-responsive" src="/webportal/img/news4.jpg" alt="Title">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="c-title c-font-bold c-font-18">
+                                    <a href="">Title</a>
+                                </div>
+                                <div class="c-date">Ngày ban hành</div>
+                                <p>
+                                    Tóm tăt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-right-menu">
+                    <div th:insert="~{fragments/rightMenuNewsPartial :: rightMenuNewsPartial}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: BLOG LISTING  -->
+    <!-- END: PAGE CONTENT -->
+</div>
+<div th:insert="~{fragments/footerWebPortalPartial :: footerwebportal}"></div>
+<div th:insert="~{fragments/backToTopWebPortal :: backToTopWebPortal}"></div>
+</body>
+</html>

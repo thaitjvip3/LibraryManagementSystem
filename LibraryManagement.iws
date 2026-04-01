@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38702d8e-7229-4b40-9218-f56f5f6a118a" name="Default Changelist" comment="[LM] Layout home web portal">
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/DAO/PatronTypeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/service/PatronTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/source/service/PatronTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/renewPatron.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/updatePatron.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryManagement.iws" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagement.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/PatronManagementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/PatronManagementDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/controller/admin/PatronManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/controller/admin/PatronManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/entity/Patron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/entity/Patron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/PatronManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/PatronManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/PatronManagementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/PatronManagementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/source/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/source/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/global/plugins/bootbox/bootbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/global/plugins/bootbox/bootbox.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/notificationPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/notificationPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/insertPatron.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/insertPatron.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/patronManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/patronManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/PatronManagementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/PatronManagementDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/controller/admin/PatronManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/controller/admin/PatronManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/entity/Patron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/entity/Patron.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/PatronManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/PatronManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/PatronManagementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/PatronManagementServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/source/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/source/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/global/plugins/bootbox/bootbox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/global/plugins/bootbox/bootbox.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/notificationPartial.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/notificationPartial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/insertPatron.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/insertPatron.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/patronManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/patronManagement.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rfOjDFePIIARP4c4ss6Vh8ZOB5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\E6530\Desktop\LibraryManagement\src\main\resources\templates\WebPortal" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="source.controller.admin" />
+      <recent name="source.controller.webPortal" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\E6530\Desktop\LibraryManagement\src\main\resources\templates" />
+      <recent name="C:\Users\E6530\Desktop\LibraryManagement\src\main\resources\data" />
+      <recent name="C:\Users\E6530\Desktop\LibraryManagement\src\main\resources\static\images" />
+      <recent name="D:\LibraryManagement\src\main\resources" />
+      <recent name="D:\LibraryManagement\src\main\java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="LibraryManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="source.App" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_LibraryManagement" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52544" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38702d8e-7229-4b40-9218-f56f5f6a118a" name="Default Changelist" comment="" />
+      <created>1619363810668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619363810668</updated>
+      <workItem from="1619363816048" duration="4024000" />
+      <workItem from="1619439296433" duration="2557000" />
+      <workItem from="1619442145092" duration="387000" />
+      <workItem from="1619442911934" duration="342000" />
+      <workItem from="1619444366957" duration="1785000" />
+      <workItem from="1619701830258" duration="1302000" />
+      <workItem from="1619703177098" duration="15230000" />
+      <workItem from="1619788611749" duration="1247000" />
+      <workItem from="1619796812322" duration="240000" />
+      <workItem from="1619876935414" duration="7537000" />
+      <workItem from="1619930467432" duration="3897000" />
+      <workItem from="1619942372520" duration="10380000" />
+      <workItem from="1619952808293" duration="83000" />
+      <workItem from="1619953024282" duration="567000" />
+      <workItem from="1619963479012" duration="9759000" />
+      <workItem from="1620028593712" duration="17707000" />
+      <workItem from="1620058385338" duration="2629000" />
+      <workItem from="1620061194776" duration="194000" />
+      <workItem from="1620105838935" duration="9018000" />
+      <workItem from="1620117225157" duration="1153000" />
+      <workItem from="1620143291246" duration="2194000" />
+      <workItem from="1620202568840" duration="3605000" />
+      <workItem from="1620221588633" duration="2364000" />
+      <workItem from="1620267784339" duration="3953000" />
+      <workItem from="1620355147417" duration="9778000" />
+      <workItem from="1620703531135" duration="329000" />
+      <workItem from="1620964885741" duration="466000" />
+      <workItem from="1620980634814" duration="16875000" />
+      <workItem from="1621055004729" duration="9951000" />
+      <workItem from="1621083843315" duration="2732000" />
+      <workItem from="1621138837683" duration="13952000" />
+      <workItem from="1621217499879" duration="43780000" />
+      <workItem from="1621309233067" duration="21317000" />
+    </task>
+    <task id="LOCAL-00001" summary="[LM] Create project">
+      <created>1619442235891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619442235891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[LM] Layout home web portal">
+      <created>1619732557236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619732557236</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="[LM] Create project" />
+    <MESSAGE value="[LM] Layout home web portal" />
+    <option name="LAST_COMMIT_MESSAGE" value="[LM] Layout home web portal" />
+  </component>
+</project>
